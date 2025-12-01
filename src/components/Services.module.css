@@ -1,0 +1,51 @@
+.services {
+    padding: 8rem 2rem;
+    background: var(--card-bg);
+    color: var(--foreground);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--background);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.icon {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.serviceTitle {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--secondary);
+    line-height: 1.6;
+}
