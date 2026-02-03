@@ -1,34 +1,70 @@
 "use client";
 
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
-    return (
-        <footer className={styles.footer} id="contact">
-            <div className={styles.container}>
-                <div className={styles.socials}>
-                    <h2 className={styles.socialTitle}>Let's Build Something Amazing</h2>
-                    <p>Open for opportunities and collaborations.</p>
+    const currentYear = new Date().getFullYear();
 
-                    <div className={styles.socialLinks}>
-                        <a href="#" className={styles.socialLink}><Github size={24} /></a>
-                        <a href="#" className={styles.socialLink}><Linkedin size={24} /></a>
-                        <a href="#" className={styles.socialLink}><Twitter size={24} /></a>
-                        <a href="mailto:simon@example.com" className={styles.socialLink}><Mail size={24} /></a>
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.container}>
+                <div className={styles.content}>
+                    <div className={styles.brand}>
+                        <h3 className={styles.brandName}>Simon Juma</h3>
+                        <p className={styles.brandTagline}>
+                            Junior Full-Stack Developer | Building Digital Solutions
+                        </p>
+                    </div>
+
+                    <div className={styles.links}>
+                        <h4 className={styles.linksTitle}>Quick Links</h4>
+                        <a href="#hero" className={styles.link}>Home</a>
+                        <a href="#about" className={styles.link}>About</a>
+                        <a href="#projects" className={styles.link}>Projects</a>
+                        <a href="#contact" className={styles.link}>Contact</a>
+                    </div>
+
+                    <div className={styles.social}>
+                        <h4 className={styles.socialTitle}>Connect</h4>
+                        <div className={styles.socialLinks}>
+                            <a 
+                                href="https://github.com/ALIBCJH" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
+                                aria-label="GitHub"
+                            >
+                                <Github size={20} />
+                            </a>
+                            <a 
+                                href="https://www.linkedin.com/in/simon-ombom-603723253/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className={styles.socialLink}
+                                aria-label="LinkedIn"
+                            >
+                                <Linkedin size={20} />
+                            </a>
+                            <a 
+                                href="mailto:simonjuma465@gmail.com"
+                                className={styles.socialLink}
+                                aria-label="Email"
+                            >
+                                <Mail size={20} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <form className={styles.contactForm} onSubmit={(e) => e.preventDefault()}>
-                    <input type="text" placeholder="Your Name" className={styles.input} />
-                    <input type="email" placeholder="Your Email" className={styles.input} />
-                    <textarea placeholder="Message" className={styles.textarea}></textarea>
-                    <button type="submit" className={styles.button}>Send Message</button>
-                </form>
-            </div>
-
-            <div className={styles.copyright}>
-                © {new Date().getFullYear()} Simon Juma. All rights reserved.
+                <div className={styles.bottom}>
+                    <p className={styles.copyright}>
+                        © {currentYear} Simon Juma. All rights reserved.
+                    </p>
+                    <p className={styles.made}>
+                        Made with <Heart size={14} className={styles.heart} /> using Next.js
+                    </p>
+                </div>
             </div>
         </footer>
     );
