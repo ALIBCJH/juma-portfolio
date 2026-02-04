@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
 import styles from "./ProjectCard.module.css";
 
 interface ProjectProps {
@@ -12,6 +13,8 @@ interface ProjectProps {
     features: string[];
     stack: string[];
     contribution: string;
+    github: string | null;
+    demo: string | null;
 }
 
 export default function ProjectCard({ project, index }: { project: ProjectProps; index: number }) {
@@ -46,6 +49,31 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
 
                 <div className={styles.contribution}>
                     <strong>My Role:</strong> {project.contribution}
+                </div>
+
+                <div className={styles.links}>
+                    {project.github && (
+                        <a 
+                            href={project.github} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            <Github size={18} />
+                            View Code
+                        </a>
+                    )}
+                    {project.demo && (
+                        <a 
+                            href={project.demo} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                        >
+                            <ExternalLink size={18} />
+                            Live Demo
+                        </a>
+                    )}
                 </div>
             </div>
         </motion.div>

@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Mail, Phone, MapPin, Send, Check, AlertCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
+    const formRef = useRef<HTMLFormElement>(null);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        subject: "",
+        title: "",
         message: ""
     });
     const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -24,12 +26,33 @@ export default function Contact() {
         e.preventDefault();
         setStatus("sending");
 
-        // Simulate form submission
-        setTimeout(() => {
+        if (!formRef.current) return;
+
+        try {
+            // Send email using EmailJS with form reference
+            const result = await emailjs.sendForm(
+                'service_3kb1xw9',           // Your Service ID
+                'template_qhclsts',          // Your Template ID
+                formRef.current,
+                'UbCYSGlL2myEb892n'         // Your Public Key
+            );
+
+            console.log('SUCCESS!', result.text);
             setStatus("success");
-            setFormData({ name: "", email: "", subject: "", message: "" });
-            setTimeout(() => setStatus("idle"), 3000);
-        }, 1500);
+            
+            // Reset form
+            if (formRef.current) {
+                formRef.current.reset();
+            }
+            setFormData({ name: "", email: "", title: "", message: "" });
+            
+            setTimeout(() => setStatus("idle"), 5000);
+            
+        } catch (error: any) {
+            console.error("EmailJS Error:", error.text || error);
+            setStatus("error");
+            setTimeout(() => setStatus("idle"), 5000);
+        }
     };
 
     return (
@@ -86,7 +109,7 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    <form className={styles.form} onSubmit={handleSubmit}>
+                    <form ref={formRef} className={styles.form} onSubmit={handleSubmit}>
                         <div className={styles.formGroup}>
                             <label htmlFor="name" className={styles.label}>Name</label>
                             <input
@@ -116,12 +139,12 @@ export default function Contact() {
                         </div>
 
                         <div className={styles.formGroup}>
-                            <label htmlFor="subject" className={styles.label}>Subject</label>
+                            <label htmlFor="title" className={styles.label}>Subject</label>
                             <input
                                 type="text"
-                                id="subject"
-                                name="subject"
-                                value={formData.subject}
+                                id="title"
+                                name="title"
+                                value={formData.title}
                                 onChange={handleChange}
                                 className={styles.input}
                                 required
