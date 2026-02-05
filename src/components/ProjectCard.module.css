@@ -42,7 +42,7 @@
 }
 
 .image {
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.5s ease;
 }
 
@@ -102,4 +102,30 @@
     border-top: 1px dashed var(--border);
     padding-top: 1rem;
     margin-top: auto;
+    margin-bottom: 1rem;
+}
+
+.links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
