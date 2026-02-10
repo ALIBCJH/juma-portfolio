@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index }: { project: ProjectProps;
             <div className={styles.imageContainer}>
                 <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} - ${project.description} built by Simon Juma`}
                     fill
                     className={styles.image}
                 />

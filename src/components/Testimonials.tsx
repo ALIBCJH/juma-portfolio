@@ -31,7 +31,7 @@ export default function Testimonials() {
                                 <div className={styles.avatar}>
                                     <Image
                                         src={item.image}
-                                        alt={item.name}
+                                        alt={`${item.name} - ${item.role} - Testimonial for Simon Juma`}
                                         fill
                                         className={styles.avatarImage}
                                     />

@@ -25,13 +25,19 @@ export default function About() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <p className={styles.text}>
-                        I’m a <span className={styles.highlight}>Software Engineer</span> driven by the challenge of building systems that matter.
-                        With a practical approach to problem-solving and a passion for scalable architecture, I turn complex requirements into
-                        <span className={styles.highlight}> robust digital products</span>.
+                        Hey, I'm <span className={styles.highlight}>Simon Juma</span> (also known as Simon Ombom) — a builder at heart.
+                        I'm a <span className={styles.highlight}>Software Engineer</span> from Kenya who creates software that doesn't just sit in a repo… 
+                        it moves the needle for real people. My work lives at the intersection of <span className={styles.highlight}>health, agriculture, and education in Africa</span>, 
+                        where technology isn't a luxury — it's a lifeline.
                         <br /><br />
-                        Whether it's optimizing backend pipelines or crafting intuitive user interfaces, I bring a
-                        <span className={styles.highlight}> warm, collaborative energy</span> to every team.
-                        I believe in technology that empowers people—building the future, one line of code at a time.
+                        I love diving deep into the backend ocean, crafting systems that are clean, scalable, and stubbornly reliable. 
+                        My toolbox? <span className={styles.highlight}>Node.js, Express, MongoDB, the MERN stack, AWS, Terraform</span>, and a growing love for 
+                        <span className={styles.highlight}> agentic RAG pipelines in Python</span>. I'm a proud alumnus of 
+                        <span className={styles.highlight}> Dedan Kimathi University of Technology (DeKUT)</span>, and I bring a warm, collaborative energy to every team.
+                        <br /><br />
+                        Whether I'm building AI assistants for farmers, creating multilingual health tools, or shaping next-gen educational platforms, 
+                        I'm driven by one thing: <span className={styles.highlight}>impact over hype</span>. I'm currently open to 
+                        <span className={styles.highlight}> software engineering, manager, and AI researcher roles</span>.
                     </p>
                 </motion.div>
             </div>
