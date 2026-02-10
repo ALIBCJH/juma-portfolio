@@ -2,9 +2,26 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Download, CheckCircle } from "lucide-react";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
+    const scrollToSection = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleDownloadCV = () => {
+        const link = document.createElement('a');
+        link.href = '/images/JUMA-CV-2.0.pdf';
+        link.download = 'Simon_Juma_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <section className={styles.hero}>
             <div className={styles.container}>
@@ -15,6 +32,18 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <div className={styles.splash} />
+                    
+                    {/* Availability Status Badge */}
+                    <motion.div 
+                        className={styles.availabilityBadge}
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        <CheckCircle size={16} className={styles.availabilityIcon} />
+                        <span>Available for opportunities</span>
+                    </motion.div>
+
                     <span className={styles.greeting}>Hello World,</span>
                     <h1 className={styles.title}>
                         I'm <span className={styles.highlight}>Simon Juma</span>
@@ -24,8 +53,25 @@ export default function Hero() {
                     </p>
 
                     <div className={styles.ctaGroup}>
-                        <button className={styles.primaryBtn}>View Work</button>
-                        <button className={styles.secondaryBtn}>Contact Me</button>
+                        <button 
+                            className={styles.primaryBtn}
+                            onClick={() => scrollToSection('projects')}
+                        >
+                            View Work
+                        </button>
+                        <button 
+                            className={styles.secondaryBtn}
+                            onClick={() => scrollToSection('contact')}
+                        >
+                            Contact Me
+                        </button>
+                        <button 
+                            className={styles.downloadBtn}
+                            onClick={handleDownloadCV}
+                        >
+                            <Download size={18} />
+                            Download CV
+                        </button>
                     </div>
                 </motion.div>
 
