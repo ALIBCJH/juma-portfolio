@@ -28,30 +28,23 @@ export default function Footer() {
                     <div className={styles.social}>
                         <h4 className={styles.socialTitle}>Connect</h4>
                         <div className={styles.socialLinks}>
-                            <a 
-                                href="https://github.com/ALIBCJH" 
-                                target="_blank" 
+                            <a
+                                href="https://github.com/ALIBCJH"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
                                 aria-label="GitHub"
                             >
                                 <Github size={20} />
                             </a>
-                            <a 
-                                href="https://www.linkedin.com/in/simon-ombom-603723253/" 
-                                target="_blank" 
+                            <a
+                                href="https://www.linkedin.com/in/simon-ombom-603723253/"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin size={20} />
-                            </a>
-                            <a 
-                                href="mailto:simonjuma465@gmail.com"
-                                className={styles.socialLink}
-                                aria-label="Email"
-                            >
-                                <Mail size={20} />
                             </a>
                         </div>
                     </div>

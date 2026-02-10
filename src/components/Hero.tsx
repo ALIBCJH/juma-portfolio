@@ -17,10 +17,10 @@ export default function Hero() {
                     <div className={styles.splash} />
                     <span className={styles.greeting}>Hello World,</span>
                     <h1 className={styles.title}>
-                        I’m <span className={styles.highlight}>Simon</span>
+                        I'm <span className={styles.highlight}>Simon Juma</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Crafting digital masterpieces with code. I turn complex problems into beautiful, scalable solutions.
+                        Software Engineer (also known as Simon Ombom) building scalable solutions with Node.js, MERN stack, AWS, and AI. Specialized in health, agriculture, and education technology for Africa.
                     </p>
 
                     <div className={styles.ctaGroup}>
@@ -39,7 +39,7 @@ export default function Hero() {
                     <div className={styles.maskContainer}>
                         <Image
                             src="/images/simon-hero.jpg"
-                            alt="Simon Juma"
+                            alt="Simon Juma (Simon Ombom) - Software Engineer specializing in Node.js, MERN stack, AWS, and AI solutions"
                             fill
                             priority
                             className={styles.image}
