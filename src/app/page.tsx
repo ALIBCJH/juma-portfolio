@@ -3,6 +3,7 @@ import About from "@/components/About";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
+import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -18,6 +19,7 @@ export default function Home() {
       <TechStack />
       <Services />
       <Projects />
+      <Gallery />
       <Testimonials />
       <FAQ />
       <Contact />
