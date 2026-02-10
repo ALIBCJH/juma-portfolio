@@ -74,10 +74,51 @@
     margin-top: 0.5rem;
 }
 
+.availabilityBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 50px;
+    color: rgb(16, 185, 129);
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1.02);
+    }
+}
+
+.availabilityIcon {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
 .ctaGroup {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .primaryBtn {
@@ -115,6 +156,28 @@
     border-color: var(--primary);
     color: var(--primary);
     transform: translateY(-2px);
+}
+
+.downloadBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: rgba(14, 165, 233, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.downloadBtn:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .imageWrapper {
@@ -208,8 +271,13 @@
     }
 
     .primaryBtn,
-    .secondaryBtn {
+    .secondaryBtn,
+    .downloadBtn {
         width: 100%;
+    }
+
+    .availabilityBadge {
+        align-self: center;
     }
 
     .imageWrapper {
