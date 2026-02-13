@@ -13,7 +13,7 @@ export default function Footer() {
                     <div className={styles.brand}>
                         <h3 className={styles.brandName}>Simon Juma</h3>
                         <p className={styles.brandTagline}>
-                            Junior Full-Stack Developer | Building Digital Solutions
+                            AI Architect & Cloud Engineer | Building Autonomous Systems
                         </p>
                     </div>
 

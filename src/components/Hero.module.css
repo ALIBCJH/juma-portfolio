@@ -51,10 +51,18 @@
 
 .title {
     font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 1.1;
+    line-height: 1.2;
     font-weight: 800;
     color: var(--foreground);
     margin: 0;
+}
+
+.titleSecondary {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--secondary);
+    display: block;
+    margin-top: 0.5rem;
 }
 
 .highlight {
