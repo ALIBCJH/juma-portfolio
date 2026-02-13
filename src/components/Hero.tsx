@@ -46,10 +46,11 @@ export default function Hero() {
 
                     <span className={styles.greeting}>Hello World,</span>
                     <h1 className={styles.title}>
-                        I'm <span className={styles.highlight}>Simon Juma</span>
+                        I'm <span className={styles.highlight}>Simon Juma</span>,<br />
+                        <span className={styles.titleSecondary}>AI Architect & Cloud Engineer</span>
                     </h1>
                     <p className={styles.subtitle}>
-                        Software Engineer (also known as Simon Ombom) building scalable solutions with Node.js, MERN stack, AWS, and AI. Specialized in health, agriculture, and education technology for Africa.
+                        Software Engineer (also known as Simon Ombom) specializing in <strong>Agentic RAG Pipelines</strong> and <strong>Infrastructure as Code (Terraform)</strong>. I bridge the gap between autonomous AI and resilient, robust cloud systems—delivering scalable solutions across health, agriculture, and education technology in Africa.
                     </p>
 
                     <div className={styles.ctaGroup}>

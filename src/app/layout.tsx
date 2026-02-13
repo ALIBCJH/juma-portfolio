@@ -23,23 +23,32 @@ const comforter = Comforter_Brush({
 
 export const metadata: Metadata = {
   title: {
-    default: "Simon Juma (Ombom) | Software Engineer & Full-Stack Developer | AWS, Node.js, AI",
+    default: "Simon Juma (Ombom) - AI Architect & Cloud Engineer | Agentic RAG Systems | Terraform Expert",
     template: "%s | Simon Juma"
   },
   description:
-    "Simon Juma (Simon Ombom) - Software Engineer from Kenya specializing in Node.js, MERN stack, AWS, Terraform, and AI solutions. Building impactful technology for health, agriculture, and education in Africa. DeKUT alumnus. Available for software engineering roles.",
+    "Simon Juma (Simon Ombom) - AI Architect and Cloud Engineer from Kenya specializing in Agentic RAG Pipelines, Infrastructure as Code (Terraform), AWS cloud architecture, Node.js, and MERN stack. Building autonomous AI systems and resilient cloud infrastructure for Africa's health, agriculture, and education sectors. DeKUT alumnus.",
   metadataBase: new URL("https://simonjuma.me"),
   keywords: [
     "Simon Juma",
     "Simon Ombom",
     "Simon Juma Ombom",
+    "AI Architect Kenya",
+    "Cloud Engineer Kenya",
+    "Agentic AI",
+    "RAG Pipelines",
+    "Retrieval Augmented Generation",
+    "Terraform Expert",
+    "Infrastructure as Code",
+    "IaC Developer",
     "Software Engineer Kenya",
     "Full Stack Developer Kenya",
     "Node.js Developer Nairobi",
     "MERN Stack Developer",
-    "AWS Engineer",
-    "Terraform Developer",
+    "AWS Solutions Architect",
+    "AWS Cloud Engineer",
     "AI Engineer Kenya",
+    "Machine Learning Engineer",
     "Backend Developer",
     "Next.js Developer",
     "React Developer",
@@ -59,9 +68,9 @@ export const metadata: Metadata = {
   creator: "Simon Juma Ombom",
   publisher: "Simon Juma",
   openGraph: {
-    title: "Simon Juma (Ombom) | Software Engineer & Full-Stack Developer",
+    title: "Simon Juma (Ombom) - AI Architect & Cloud Engineer | Agentic RAG | Terraform",
     description:
-      "Software Engineer from Kenya building scalable solutions with Node.js, MERN stack, AWS, and AI. Specialized in health, agriculture, and education technology. Open to software engineering opportunities.",
+      "AI Architect and Cloud Engineer from Kenya specializing in Agentic RAG Pipelines, Infrastructure as Code (Terraform), AWS cloud architecture, Node.js, and MERN stack. Building autonomous AI systems and resilient cloud infrastructure for Africa.",
     url: "https://simonjuma.me",
     siteName: "Simon Juma Portfolio",
     images: [
@@ -77,9 +86,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Simon Juma (Ombom) | Software Engineer",
+    title: "Simon Juma (Ombom) - AI Architect & Cloud Engineer",
     description:
-      "Software Engineer specializing in Node.js, MERN stack, AWS, Terraform, and AI solutions. Building impactful tech for Africa.",
+      "AI Architect specializing in Agentic RAG Pipelines, Terraform, AWS, Node.js, and MERN stack. Building autonomous AI systems and cloud infrastructure for Africa.",
   },
   robots: {
     index: true,
@@ -124,7 +133,7 @@ export default function RootLayout({
                 "https://github.com/ALIBCJH",
                 "https://www.linkedin.com/in/simon-ombom-603723253/",
               ],
-              jobTitle: "Software Engineer",
+              jobTitle: "AI Architect & Cloud Engineer",
               worksFor: {
                 "@type": "Organization",
                 name: "Freelance"
@@ -139,19 +148,27 @@ export default function RootLayout({
                 addressCountry: "Kenya"
               },
               description:
-                "Software Engineer specializing in Node.js, MERN stack, AWS, Terraform, and AI solutions. Building impactful technology for health, agriculture, and education in Africa.",
+                "AI Architect and Cloud Engineer specializing in Agentic RAG Pipelines, Infrastructure as Code (Terraform), AWS cloud architecture, and full-stack development. Expert in building autonomous AI systems and resilient cloud infrastructure for African tech solutions.",
               email: "simonjuma465@gmail.com",
               knowsAbout: [
+                "Agentic AI",
+                "RAG Pipelines",
+                "Retrieval Augmented Generation",
+                "Infrastructure as Code",
+                "Terraform",
+                "AWS Cloud Architecture",
                 "Node.js",
                 "Express.js",
                 "MongoDB",
                 "React",
                 "Next.js",
-                "AWS",
-                "Terraform",
                 "Python",
+                "FastAPI",
                 "Artificial Intelligence",
-                "RAG Pipelines",
+                "Machine Learning",
+                "Docker",
+                "Kubernetes",
+                "Microservices",
                 "Backend Development",
                 "Full Stack Development"
               ]
